@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Title of the document</title>
+</head>
+<body>
+    <script>
+    const dolphinsScores = [96, 108, 89];
+    const koalasScores = [88, 91, 110];
+    
+    const calcAverage = (scores) => scores.reduce((total, score) => total + score, 0) / scores.length;
+    
+    const dolphinsAverage = calcAverage(dolphinsScores);
+    const koalasAverage = calcAverage(koalasScores);
+    
+    if (dolphinsAverage > koalasAverage && dolphinsAverage >= 100) {
+      console.log(`Dolphins win with an average score of ${dolphinsAverage}`);
+
+    } else if (koalasAverage > dolphinsAverage && koalasAverage >= 100) {
+      console.log(`Koalas win with an average score of ${koalasAverage}`);
+
+    } else if (dolphinsAverage === koalasAverage && dolphinsAverage >= 100 && koalasAverage >= 100) {
+      console.log("It's a draw with both teams having an average score of 100 or more!");
+      
+    } else {
+      console.log("No team wins the trophy");
+    }
+    </script>   
+</body>
+</html>
